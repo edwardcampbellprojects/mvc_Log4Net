@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "mvc_Log4Net Home Page";
+}
+
+<div class="jumbotron">
+    <h1>mvc_Log4Net</h1>
+    <p class="lead">A proof of concept/test MVC web application showing integration with Log4Net</p>
+    <p>
+        @* //***Log4Net_Test default test entry link *@
+        @Html.ActionLink("Run Log4Net MVC Test", "Log_Test_Entries", "Log4Net_Test")
+    </p>
+</div>
+
+<p>
+    Click the link above.
+</p>
+<p>
+    Verify the log file and db App_Log.dbo.LogEntries table for debug, error, info and warning messages
+</p>
+

@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "mvc_Log4Net Test Index";
+}
+
+@* //***Log4Net_Test: shows how to generate test log entries and view them   *@
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    Verify the log file and db App_Log.dbo.LogEntries table for debug, error, info and warning messages
+</p>
+<p style="margin:12px;">
+    @Html.ActionLink("Generate new Test Log entries and view them", "Log_Test_Entries", "Log4Net_Test")
+</p>
+
+@* use this if you want the filePath to be passed to your controller method *@
+@Html.Hidden("filePath", @"C:\Temp\Logs\App_Log.log")
+
+<p style="margin-top:12px;">
+    Or just examine the current log file at
+</p>
+
+<p style="margin:12px;">
+    @Html.ActionLink(@"C:\Temp\Logs\App_Log.log", "ShowFile", "Log4Net_Test", new { filePath = @"C:\Temp\Logs\App_Log.log" })
+</p>
+
+
